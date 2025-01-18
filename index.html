@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./aguia.png">
+    <title>Sistema Educacional</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <h1>Sistema de Educação Comunitária</h1>
+        </nav>
+      </header>
+    <main>
+        <h2 id="subt" class="subt2">Cursos Disponíveis <hr></h2>
+        <div class="container">
+            <div class="card">
+
+            <img alt="Owl" height="40" src="./logo-html.png" width="40" />
+            <h2>HTML</h2>
+            <p>
+                No curso básico de HTML, você aprenderá a criar a estrutura de páginas 
+                web utilizando tags essenciais, organizar textos, links e imagens, 
+                e compreender a hierarquia de elementos para um layout bem estruturado.
+            </p>
+            <a class="span" href="pagina_ferramentas.html">Acesse</a>
+        </div>
+
+        <div class="card">
+            <img alt="Rabbit" height="40" src="./logo-css.png" width="40" />
+            <h2>CSS</h2>
+            <p>
+                No curso básico de CSS, você aprenderá a estilizar páginas web, 
+                definindo núcleos, fontes, tamanhos e layouts. Descobrirá como aplicar 
+                design responsivo para diferentes dispositivos e organizar elementos 
+                visualmente com flexbox e grid.
+            </p>
+            <a class="span" href="conteudo_css.html">Acesse</a>
+        </div>
+
+        <div class="card">
+            <img alt="Rabbit" height="40" src="./logo_java-script.png" width="40" />
+            <h2>JavaScript</h2>
+            <p>
+                No curso básico de JavaScript, você aprenderá a criar interatividade em páginas web, 
+                manipulando elementos. Explorará conceitos fundamentais como variáveis, 
+                funções e condicionais, além de integrar scripts ao HTML.
+            </p>
+            <a class="span" href="conteudo_js.html">Acesse</a>
+        </div>
+
+        <div class="card">
+            <img alt="Rabbit" height="40" src="./logo_python.png" width="40" />
+            <h2>Python</h2>
+            <p>
+                No curso básico de Python, você aprenderá os fundamentos da linguagem, 
+                como variáveis, tipos de dados, estruturas condicionais e loops. 
+                Descobrirá como criar scripts simples para resolver problemas do dia a dia. 
+            </p>
+            <a class="span" href="conteudos_python.html">Acesse</a>
+        </div>
+        </div>
+      </main>
+      <br><br><br>
+      <footer class="fixa_rodape">
+        <p>&copy; 2025 Sistema de Educação Comunitária <br> Direitos reservados - José Lopes</p>
+      </footer>
+
+      <style>
+        @property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0turn;
+  inherits: false;
+}
+
+.card {
+  animation: 2s gradient-angle infinite linear;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#584827, #2d230f),
+    conic-gradient(
+      from var(--gradient-angle),
+      #584827 0%,
+      #c7a03c 37%,
+      #f9de90 30%,
+      #c7a03c 33%,
+      #584827 40%,
+      #584827 50%,
+      #c7a03c 77%,
+      #f9de90 80%,
+      #c7a03c 83%,
+      #584827 90%
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+@keyframes gradient-angle {
+  to {
+    --gradient-angle: 1turn;
+  }
+}
+
+/* その他 */
+html,
+body {
+  background: #141819;
+  margin: 0;
+}
+
+body {
+  font-family: "游ゴシック Medium", YuGothic, YuGothicM,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  display: grid;
+  align-content: center;
+  /*min-height: 100svh;*/
+  padding: 0;
+  color: #d5cec0;
+  gap: 24px;
+ 
+}
+
+@media (max-width: 970px) {
+    #subt {
+    width: 100vw;
+    margin-left: 0px;
+    text-align: center;
+}
+
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  margin-inline: auto;
+  grid-auto-flow: column;
+  gap: 16px 40px;
+  @media (max-width: 970px) {
+    grid-auto-flow: row;
+  }
+}
+
+.card {
+  display: grid;
+  max-width: 240px;
+  padding: 10px;
+  text-decoration: none;
+  color: currentColor;
+  border-radius: 20px;
+  place-content: center;
+  place-items: center;
+  aspect-ratio: 1/1;
+  row-gap: 16px;
+}
+
+.card h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  font-optical-sizing: auto; 
+}
+
+.subt2 {
+    width: 300px;
+    margin-left: 40px;
+}
+
+.card p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+.span {
+    padding: 5px;
+    background-color: #c7a03c;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px 0px 20px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: blue;
+}
+
+
+
+/* こんにちわんこそば！キラキラ✨ホームページエンジニアのとんこつおじさんだよ！ */
+
+footer {
+    display: flex;
+    text-align: center;
+    background-color: #584827;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.fixa_rodape {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+header {
+    background-color: #584827;
+    color: white;
+    padding: 1rem;
+  }
+  
+  header nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    gap: 40%;
+  }
+  
+  header nav {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+ 
+      </style>
+</body>
+</html>
