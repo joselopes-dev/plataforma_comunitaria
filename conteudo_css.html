@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./aguia.png">
+  <title>Sistema Educacional</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Agora vamos estudar - CSS.</h1>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Acesse os conteúdos</h2>
+    <div class="likk">
+      <a href="quiz_css.html">Quiz</a>
+      <a href="#">Jogos</a>
+      <a class="pdf1" onclick="downloadPDF()">Baixar apostila</a>
+      <a id="home" href="#">Vídeo aula</a>
+      <a id="home" href="index.html">Pagina inicial</a>
+    </div>
+    
+  </main>
+
+  <footer class="fixa_rodape">
+    <p>&copy; 2025 Sistema de Educação Comunitária <br> Direitos reservados - José Lopes</p>
+  </footer>
+
+  <style>
+    #home {
+      background-color: blue;
+      color: #fff;
+      border-radius: 10px 0px 10px 0px;
+    }
+
+    #home:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .likk {
+      display: flex;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    a {
+      padding: 10px;
+      background-color: #c7a03c;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background-color: blue;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 780px) {
+      .likk {
+      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+      justify-content: center;
+    }
+    }
+  </style>
+
+<script>
+  
+  function downloadPDF() {
+    // URL do PDF que você quer baixar
+    const pdfUrl = 'apostila_css_revisado.pdf';
+
+    // Cria um link temporário
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+
+    // Define o atributo download para sugerir um nome ao arquivo
+    link.download = 'apostila_css'; // Nome do arquivo baixado
+
+    // Adiciona o link ao documento e clica nele para iniciar o download
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove o link do documento após o download
+    document.body.removeChild(link);
+  }
+</script>
+</body>
+</html>
