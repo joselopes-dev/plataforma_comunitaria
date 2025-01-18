@@ -85,14 +85,14 @@
   
   function downloadPDF() {
     // URL do PDF que você quer baixar
-    const pdfUrl = 'apostila_html_revisado.pdf';
+    const pdfUrl = 'apostila_html2.pdf';
 
     // Cria um link temporário
     const link = document.createElement('a');
     link.href = pdfUrl;
 
     // Define o atributo download para sugerir um nome ao arquivo
-    link.download = 'apostila_html2'; // Nome do arquivo baixado
+    link.download = 'apostila_html'; // Nome do arquivo baixado
 
     // Adiciona o link ao documento e clica nele para iniciar o download
     document.body.appendChild(link);
